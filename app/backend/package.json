@@ -1,0 +1,37 @@
+{
+  "name": "samantha-betts-backend",
+  "version": "1.0.0",
+  "main": "lambda.js",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "cp package*json dist/ && yarn run zip",
+    "start": "nodemon --config nodemon.json",
+    "test": "cross-env NODE_ENV=test jest --passWithNoTests",
+    "zip": "zip -r dist.zip dist/"
+  },
+  "license": "Unlicense",
+  "private": true,
+  "dependencies": {
+    "@vendia/serverless-express": "^4.8.2",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "express": "^4.17.1",
+    "source-map-support": "^0.5.19",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/helmet": "^4.0.0",
+    "@types/jest": "^27.5.2",
+    "@types/supertest": "^2.0.11",
+    "chai": "^4.3.4",
+    "cross-env": "^7.0.3",
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6",
+    "ts-jest": "^28.0.3",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  }
+}
