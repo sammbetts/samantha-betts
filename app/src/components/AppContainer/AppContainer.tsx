@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Container, Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 type Props = {
-  children: React.ReactNode;
+  children: PropsWithChildren<React.ReactNode>;
 };
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -25,12 +25,14 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-export const AppContainer: React.FC<Props> = (props) => {
+export const AppContainer: React.FC<Props> = ({
+  children,
+}: PropsWithChildren<Props>) => {
   const classes = useStyles();
 
   return (
     <>
-      <Container className={classes.appContainer}>{props.children}</Container>
+      <Container className={classes.appContainer}>{children}</Container>
     </>
   );
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
 import { routes } from '../src/utils/routes';
-import { PageTemplate } from './components/PageTemplate';
+import { AppContainer } from './components/AppContainer';
 
 export const App: React.FC = () => {
   return (
-    <PageTemplate>
+    <AppContainer>
       <Switch>
         {Object.values(routes).map((route, idx) => (
           <Route
@@ -16,7 +16,7 @@ export const App: React.FC = () => {
           />
         ))}
       </Switch>
-    </PageTemplate>
+    </AppContainer>
   );
 };
 
