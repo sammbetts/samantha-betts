@@ -1,0 +1,30 @@
+name: On deploy
+
+on:
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: 16
+
+jobs:
+  build-and-deploy-frontend:
+    name: Frontend
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      id-token: write
+      contents: read
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install Node.js dependencies
+        run: npm install
+      - name: Build Frontend
+        env:
+          REACT_APP_FUNCTION_URL: ${{ steps.get-function-url.outputs.function-url }}
+        run: npm run build
