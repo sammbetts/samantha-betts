@@ -1,8 +1,8 @@
 import { apiUrl } from '../config';
 
-export const useGetAllEntries = async () => {
+export const useGetAllItems = async () => {
   try {
-    const response = await fetch(`${apiUrl}/entries`, {
+    const response = await fetch(`${apiUrl}/items`, {
       credentials: 'include',
       method: 'GET',
       headers: {

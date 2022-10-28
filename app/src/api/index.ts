@@ -1,2 +1,2 @@
 export { useGetHealth } from './useGetHealth';
-export { useGetAllEntries } from './useGetAllEntries'
+export { useGetAllItems } from './useGetAllItems'

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Typography, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { Health } from '../components/Health';
-import { SideBar, SideBarItem } from '../components/SideBar';
-import { Modal } from '../components/Modal';
-import { useGetAllEntries, useGetHealth } from '../api';
-import { Items } from '../types';
+
+import { Footer } from '../components/Footer';
+// import { SideBar, SideBarItem } from '../components/SideBar';
+// import { Modal } from '../components/Modal';
+// import { useGetAllItems } from '../api';
+// import { Items } from '../types';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -30,22 +31,19 @@ const useStyles = makeStyles(() => ({
 
 export const HomePage: React.FC = () => {
   const classes = useStyles();
-  const getHealth = useGetHealth();
-  const getAllItems = useGetAllEntries();
+  // const getAllItems = useGetAllItems();
 
-  const [health, setHealth] = React.useState<boolean>(false);
-  const [items, setItems] = React.useState([]);
-  const [selectedItem, setSelectedItem] = React.useState<Items | null>(null);
+  // const [items, setItems] = React.useState([]);
+  // const [selectedItem, setSelectedItem] = React.useState<Items | null>(null);
 
-  React.useEffect(() => {
-    getAllItems.then((data) => setItems(data));
-    getHealth.then(({ healthy }) => setHealth(healthy));
-  }, []);
+  // React.useEffect(() => {
+  //   getAllItems.then((data) => setItems(data));
+  // }, []);
 
-  const sideBarItems = items?.map((item: Items) => ({
-    onClick: () => setSelectedItem(item),
-    component: <SideBarItem title={item.id} description={item.name || ''} />,
-  }));
+  // const sideBarItems = items?.map((item: Items) => ({
+  //   onClick: () => setSelectedItem(item),
+  //   component: <SideBarItem title={item.id} description={item.name || ''} />,
+  // }));
 
   return (
     <>
@@ -55,10 +53,10 @@ export const HomePage: React.FC = () => {
         </Typography>
         <br></br>
         <Box className={classes.content}>
-          <Health isHealthy={health} />
+
         </Box>
       </Box>
-      <SideBar width={250} height="calc(100vh - 112px)" items={sideBarItems} />
+      {/* <SideBar width={250} height="calc(100vh - 112px)" items={sideBarItems} />
       <Modal
         isOpen={!!selectedItem}
         handleClose={() => setSelectedItem(null)}
@@ -75,7 +73,7 @@ export const HomePage: React.FC = () => {
             </Box>
           </Box>
         )}
-      </Modal>
+      </Modal> */}
     </>
   );
 };

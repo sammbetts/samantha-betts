@@ -10,8 +10,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   appContainer: {
     boxShadow:
       'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 10px 0px;',
-    backgroundColor: theme.palette.background.paper,
-    fontColor: theme.palette.text.primary,
+    // backgroundColor: theme.palette.background.paper,
+    // fontColor: theme.palette.text.primary,
     position: 'relative',
     padding: '2rem',
     marginTop: '2rem',
