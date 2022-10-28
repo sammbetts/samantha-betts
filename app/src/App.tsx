@@ -2,7 +2,9 @@ import React from "react";
 import { Route, Switch } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import { routes } from "../src/utils/routes";
+
 import { AppContainer } from "./components/AppContainer";
+import { Footer } from "./components/Footer";
 
 export const App: React.FC = () => {
   return (
@@ -20,6 +22,7 @@ export const App: React.FC = () => {
             ))}
           </Switch>
         </AppContainer>
+        <Footer />
       </BrowserRouter>
     </>
   );

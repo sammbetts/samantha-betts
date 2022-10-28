@@ -13,13 +13,13 @@ export const Health: React.FC<Props> = (props: Props) => {
   const icon = isHealthy ? (
     <GppGoodOutlinedIcon
       color="success"
-      fontSize="large"
+      fontSize="small"
       data-test-id={'good-icon'}
     />
   ) : (
     <ErrorOutlineIcon
       color="error"
-      fontSize="large"
+      fontSize="small"
       data-test-id={'error-icon'}
     />
   );
