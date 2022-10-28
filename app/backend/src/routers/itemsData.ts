@@ -1,7 +1,7 @@
 import { Item } from '../types';
 
 // Ephemeral in-memory data store
-const users: Item[] = [
+const items: Item[] = [
   {
     id: 1,
     name: 'Alfie',
@@ -16,4 +16,4 @@ const users: Item[] = [
   },
 ];
 
-export default users;
+export default items;

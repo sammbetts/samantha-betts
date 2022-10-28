@@ -4,7 +4,7 @@ import { makeStyles } from '@mui/styles';
 import { Health } from '../components/Health';
 import { SideBar, SideBarItem } from '../components/SideBar';
 import { Modal } from '../components/Modal';
-import { useGetAllEntries, useGetHealth } from '../api';
+import { useGetAllItems, useGetHealth } from '../api';
 import { Items } from '../types';
 
 const useStyles = makeStyles(() => ({
@@ -31,7 +31,7 @@ const useStyles = makeStyles(() => ({
 export const HomePage: React.FC = () => {
   const classes = useStyles();
   const getHealth = useGetHealth();
-  const getAllItems = useGetAllEntries();
+  const getAllItems = useGetAllItems();
 
   const [health, setHealth] = React.useState<boolean>(false);
   const [items, setItems] = React.useState([]);
