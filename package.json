@@ -2,7 +2,6 @@
   "name": "samantha-betts",
   "version": "1.0.0",
   "description": "Personal Web Page",
-  "homepage": "https://sammbetts.github.io/samantha-betts/",
   "scripts": {
     "setup": "cd app && yarn install && cd backend && yarn install",
     "frontend": "cd app && yarn start",

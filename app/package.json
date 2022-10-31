@@ -2,7 +2,10 @@
   "name": "samantha-betts",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sammbetts.github.io/samantha-betts/",
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -b main -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -11,29 +14,30 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.10.11",
     "@mui/icons-material": "^5.5.0",
-    "@mui/types": "7.1.2",
+    "@mui/material": "^5.10.11",
     "@mui/styles": "5.5.0",
+    "@mui/types": "7.1.2",
     "react": "^18.0.24",
     "react-dom": "^18.0.8",
-    "react-scripts": "5.0.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "typescript": "^4.4.2"
+    "react-scripts": "5.0.1",
+    "typescript": "^4.4.2",
+    "gh-pages": "^4.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "react-toggle-dark-mode": "1.0.4",
-    "prettier": "^2.7.1",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@types/react-router": "5.1.19",
-    "@types/react-router-dom": "^5.2.0"
+    "@types/react-router-dom": "^5.2.0",
+    "prettier": "^2.7.1",
+    "react-toggle-dark-mode": "1.0.4"
   },
   "browserslist": {
     "production": [
