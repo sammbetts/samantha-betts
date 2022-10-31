@@ -9,7 +9,7 @@ import { Footer } from "./components/Footer";
 export const App: React.FC = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/samantha-betts">
         <AppContainer>
           <Switch>
             {Object.values(routes).map((route, idx) => (
