@@ -3,6 +3,7 @@ import { Typography, Box, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 import { Modal } from "../components/Modal";
+import { Contact } from "../components/Contact";
 import { ThemeToggle } from "../theme/themeContext";
 
 const useStyles = makeStyles(() => ({
@@ -17,6 +18,16 @@ const useStyles = makeStyles(() => ({
     width: "100%",
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+  button: {
+    color: "secondary",
+    fontWeight: "bold",
+    borderRadius: "1em",
+    margin: "4px",
+    padding: "4px",
+    "&:hover": {
+      transition: "background 0.4s, color 0.4s",
+    },
   },
   content: {
     display: "flex",
@@ -48,7 +59,14 @@ export const HomePage: React.FC = () => {
       <Box className={classes.container}>
         <Box className={classes.header}>
           <ThemeToggle />
-          <Button onClick={handleModalOpen}>OPEN MODAL</Button>
+          <Button
+            className={classes.button}
+            color="secondary"
+            variant="outlined"
+            onClick={handleModalOpen}
+          >
+            CONTACT
+          </Button>
         </Box>
         <Typography variant="h2" className={classes.title}>
           Samantha Betts
@@ -57,7 +75,9 @@ export const HomePage: React.FC = () => {
         <Box className={classes.content}></Box>
       </Box>
       <Modal isOpen={open} handleClose={handleModalClose}>
-        <Box>Hello!</Box>
+        <Box>
+          <Contact />
+        </Box>
       </Modal>
     </>
   );
