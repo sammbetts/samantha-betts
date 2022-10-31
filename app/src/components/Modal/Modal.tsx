@@ -7,7 +7,6 @@ const useStyles = makeStyles(() => ({
   openDialog: {
     padding: "20px",
     marginLeft: "20px",
-    height: "150px",
     display: "flex",
     alignItems: "center",
   },
@@ -27,7 +26,7 @@ export const Modal: React.FC<Props> = (props: PropsWithChildren<Props>) => {
   const classes = useStyles(props);
 
   return (
-    <Dialog open={isOpen} onClose={handleClose} maxWidth={"sm"}>
+    <Dialog open={isOpen} onClose={handleClose}>
       <Box className={classes.container}>
         <DialogContent className={classes.openDialog}>{children}</DialogContent>
         <IconButton onClick={handleClose}>
