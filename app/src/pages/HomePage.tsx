@@ -4,6 +4,7 @@ import { makeStyles } from "@mui/styles";
 
 import { Modal } from "../components/Modal";
 import { ThemeToggle } from "../theme/themeContext";
+import { colors } from "../theme/styles";
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -48,7 +49,11 @@ export const HomePage: React.FC = () => {
       <Box className={classes.container}>
         <Box className={classes.header}>
           <ThemeToggle />
-          <Button onClick={handleModalOpen}>OPEN MODAL</Button>
+          <Button color="secondary"
+            onClick={handleModalOpen}
+          >
+            OPEN MODAL
+          </Button>
         </Box>
         <Typography variant="h2" className={classes.title}>
           Samantha Betts

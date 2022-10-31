@@ -45,7 +45,7 @@ export const darkTheme = responsiveFontSizes(
       },
       background: {
         default: colors.palette.dark,
-        paper: colors.palette.purple,
+        paper: colors.palette.paperDark,
       },
     },
   })
