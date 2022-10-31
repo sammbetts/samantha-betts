@@ -1,5 +1,0 @@
-{
-  "watch": ["src"],
-  "ext": "ts",
-  "exec": "set DEBUG=http & set NODE_ENV=dev && ts-node src/app.local.ts"
-}

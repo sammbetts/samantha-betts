@@ -20,8 +20,8 @@ export const ThemeToggle: React.FC = () => {
         checked={mode}
         onChange={toggleTheme}
         size={30}
-        sunColor={colors.palette.light}
-        moonColor={colors.palette.dark}
+        sunColor={colors.palette.dark}
+        moonColor={colors.palette.light}
       />
     </Box>
   );

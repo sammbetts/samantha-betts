@@ -4,8 +4,7 @@
   "private": true,
   "homepage": "https://sammbetts.github.io/samantha-betts/",
   "scripts": {
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
+    "deploy": "yarn build && gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
