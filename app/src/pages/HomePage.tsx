@@ -4,6 +4,7 @@ import { makeStyles } from "@mui/styles";
 
 import { Modal } from "../components/Modal";
 import { Contact } from "../components/Contact";
+import { BlogContainer } from "../components/Blog";
 import { ThemeToggle } from "../theme/themeContext";
 
 const useStyles = makeStyles(() => ({
@@ -75,7 +76,9 @@ export const HomePage: React.FC = () => {
           Junior Software Engineer - Developer eXperience (DX)
         </Typography>
         <br></br>
-        <Box className={classes.content}></Box>
+        <Box className={classes.content}>
+          <BlogContainer />
+        </Box>
       </Box>
       <Modal isOpen={open} handleClose={handleModalClose}>
         <Box>
