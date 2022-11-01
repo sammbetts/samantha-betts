@@ -34,6 +34,12 @@ export const darkTheme = responsiveFontSizes(
   createTheme(globalTheme, {
     palette: {
       mode: "dark",
+      primary: {
+        main: colors.palette.secondary,
+      },
+      secondary: {
+        main: colors.palette.primary,
+      },
       text: {
         primary: "#fff",
         secondary: "#fff",
@@ -50,6 +56,12 @@ export const lightTheme = responsiveFontSizes(
   createTheme(globalTheme, {
     palette: {
       mode: "light",
+      primary: {
+        main: colors.palette.primary,
+      },
+      secondary: {
+        main: colors.palette.secondary,
+      },
       text: {
         primary: "#000000",
         secondary: "#000000",

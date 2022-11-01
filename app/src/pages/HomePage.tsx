@@ -25,6 +25,9 @@ const useStyles = makeStyles(() => ({
     borderRadius: "1em",
     margin: "4px",
     padding: "4px",
+    '&:hover': {
+      background: 'rgba(255, 255, 255, 0.1)'
+    },
   },
   content: {
     display: "flex",
