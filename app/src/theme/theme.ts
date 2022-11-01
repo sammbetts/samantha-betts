@@ -1,6 +1,6 @@
-import { createTheme, responsiveFontSizes } from '@mui/material';
-import typography from './styles/typography';
-import { colors } from './styles/colors';
+import { createTheme, responsiveFontSizes } from "@mui/material";
+import typography from "./styles/typography";
+import { colors } from "./styles/colors";
 
 export const globalTheme = responsiveFontSizes(
   createTheme({
@@ -8,12 +8,14 @@ export const globalTheme = responsiveFontSizes(
       primary: {
         main: colors.palette.primary,
       },
+      secondary: {
+        main: colors.palette.secondary,
+      },
     },
     typography: typography,
     components: {
-
       MuiFormLabel: {
-        styleOverrides: { root: { color: 'inherit' } },
+        styleOverrides: { root: { color: "inherit" } },
       },
     },
     breakpoints: {
@@ -31,17 +33,10 @@ export const globalTheme = responsiveFontSizes(
 export const darkTheme = responsiveFontSizes(
   createTheme(globalTheme, {
     palette: {
-      mode: 'dark',
-      primary: {
-        main: colors.palette.primary,
-      },
-      secondary: {
-        main: colors.palette.secondary,
-        light: colors.palette.tertiary,
-      },
+      mode: "dark",
       text: {
-        primary: '#fff',
-        secondary: '#fff',
+        primary: "#fff",
+        secondary: "#fff",
       },
       background: {
         default: colors.palette.dark,
@@ -54,21 +49,14 @@ export const darkTheme = responsiveFontSizes(
 export const lightTheme = responsiveFontSizes(
   createTheme(globalTheme, {
     palette: {
-      mode: 'light',
-      primary: {
-        main: colors.palette.primary,
-      },
-      secondary: {
-        main: colors.palette.tertiary,
-        light: colors.palette.secondary,
-      },
+      mode: "light",
       text: {
-        primary: '#000000',
-        secondary: '#000000',
+        primary: "#000000",
+        secondary: "#000000",
       },
       background: {
         default: colors.palette.light,
-        paper: '#fff',
+        paper: colors.palette.paperLight,
       },
       contrastThreshold: 3,
     },

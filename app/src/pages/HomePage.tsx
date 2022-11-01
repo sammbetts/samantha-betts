@@ -20,14 +20,11 @@ const useStyles = makeStyles(() => ({
     justifyContent: "space-between",
   },
   button: {
-    color: "secondary",
     fontWeight: "bold",
+    color: "inherit",
     borderRadius: "1em",
     margin: "4px",
     padding: "4px",
-    "&:hover": {
-      transition: "background 0.4s, color 0.4s",
-    },
   },
   content: {
     display: "flex",
@@ -62,7 +59,7 @@ export const HomePage: React.FC = () => {
           <Button
             className={classes.button}
             color="secondary"
-            variant="outlined"
+            variant="contained"
             onClick={handleModalOpen}
           >
             CONTACT
@@ -70,6 +67,9 @@ export const HomePage: React.FC = () => {
         </Box>
         <Typography variant="h2" className={classes.title}>
           Samantha Betts
+        </Typography>
+        <Typography variant="subtitle1" className={classes.title}>
+          Junior Software Engineer - Developer eXperience (DX)
         </Typography>
         <br></br>
         <Box className={classes.content}></Box>
