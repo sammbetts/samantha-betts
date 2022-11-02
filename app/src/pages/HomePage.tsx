@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Link } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(() => ({
@@ -31,6 +31,9 @@ export const HomePage: React.FC = () => {
       </Typography>
       <br></br>
       <Box className={classes.content}>
+        <Typography variant="body1">
+          <Link href="/blog">Blog</Link>
+        </Typography>
       </Box>
     </Box>
   );
