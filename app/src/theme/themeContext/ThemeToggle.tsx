@@ -1,10 +1,26 @@
-import React from 'react';
-import { ThemeContext, ModeContext } from './ThemeContextProvider';
-import { Box } from '@mui/material';
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import { colors } from '../styles/colors';
+import React from "react";
+import { Box, IconButton } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+
+import { ThemeContext, ModeContext } from "./ThemeContextProvider";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { colors } from "../styles/colors";
+
+const useStyles = makeStyles(() => ({
+  iconButton: {
+    display: "flex",
+    justifyContent: "center",
+    margin: "0.4rem",
+    borderRadius: "50%",
+    "&:hover": {
+      backgroundColor: "rgba(0,0,0, 0.1)",
+    },
+  },
+}));
 
 export const ThemeToggle: React.FC = () => {
+  const classes = useStyles();
+
   const mode = React.useContext(ModeContext);
   const setMode = React.useContext(ThemeContext);
 
@@ -15,7 +31,7 @@ export const ThemeToggle: React.FC = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', margin: '0.4rem' }}>
+    <IconButton className={classes.iconButton}>
       <DarkModeSwitch
         checked={mode}
         onChange={toggleTheme}
@@ -23,6 +39,6 @@ export const ThemeToggle: React.FC = () => {
         sunColor={colors.palette.dark}
         moonColor={colors.palette.light}
       />
-    </Box>
+    </IconButton>
   );
 };
