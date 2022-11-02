@@ -1,5 +1,6 @@
 import React from "react";
-import { Typography, Box, Link } from "@mui/material";
+import { Link } from "react-router-dom";
+import { Typography, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(() => ({
@@ -32,7 +33,10 @@ export const HomePage: React.FC = () => {
       <br></br>
       <Box className={classes.content}>
         <Typography variant="body1">
-          <Link href="/blog">Blog</Link>
+          Blog: &nbsp;
+          <Link to="/blog">
+            ✍🏻
+          </Link>
         </Typography>
       </Box>
     </Box>

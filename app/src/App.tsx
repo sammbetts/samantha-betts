@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from 'react-router-dom';
 
 import { routes } from "../src/utils/routes";
 import { ThemeContextProvider } from "./theme/themeContext";
@@ -11,7 +11,7 @@ import { Footer } from "./components/Footer";
 export const App: React.FC = () => {
   return (
     <>
-      <BrowserRouter basename="/samantha-betts">
+      <HashRouter basename="/samantha-betts">
         <ThemeContextProvider>
           <AppContainer>
             <Switch>
@@ -27,7 +27,7 @@ export const App: React.FC = () => {
           </AppContainer>
           <Footer />
         </ThemeContextProvider>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };
