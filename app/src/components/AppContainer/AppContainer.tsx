@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { Container, Paper, Box, IconButton } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import HomeIcon from "@mui/icons-material/Home";
@@ -51,6 +52,9 @@ const useStyles = makeStyles(() => ({
       color: "secondary",
     },
   },
+  link: {
+    color: "inherit",
+  }
 }));
 
 export const AppContainer: React.FC<Props> = (props: Props) => {
@@ -62,9 +66,11 @@ export const AppContainer: React.FC<Props> = (props: Props) => {
         <Paper className={classes.appContainer}>
           <Box className={classes.header}>
             <ThemeToggle />
-            <IconButton className={classes.homeIconButton} href="/">
-              <HomeIcon className={classes.homeIcon} />
-            </IconButton>
+            <Link className={classes.link} to="/" >
+              <IconButton className={classes.homeIconButton}>
+                <HomeIcon className={classes.homeIcon} />
+              </IconButton>
+            </Link>
           </Box>
           {props.children}
         </Paper>

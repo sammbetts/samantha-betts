@@ -12,8 +12,7 @@ const useStyles = makeStyles(() => ({
     width: "300px",
     maxHeight: "310px",
     borderRadius: "10px",
-    border: "1px solid",
-    borderColor: "secondary",
+    boxShadow: "0px 2px 3px",
     "&:hover": {
       boxShadow: "0px 10px 20px",
     },

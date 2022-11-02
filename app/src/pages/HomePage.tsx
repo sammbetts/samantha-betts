@@ -17,6 +17,10 @@ const useStyles = makeStyles(() => ({
     width: "70%",
     textAlign: "center",
   },
+  link: {
+    color: "inherit",
+    textDecoration: "none",
+  },
 }));
 
 export const HomePage: React.FC = () => {
@@ -33,9 +37,8 @@ export const HomePage: React.FC = () => {
       <br></br>
       <Box className={classes.content}>
         <Typography variant="body1">
-          Blog: &nbsp;
-          <Link to="/blog">
-            ✍🏻
+          <Link className={classes.link} to="/blog">
+            Blog ✍🏻
           </Link>
         </Typography>
       </Box>
