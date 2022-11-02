@@ -6,12 +6,11 @@ import { BlogTile } from "./BlogTile";
 
 const useStyles = makeStyles(() => ({
   container: {
-    paddingTop: "5%",
     display: "flex",
-    flexFlow: "row-wrap",
+    flexWrap: "wrap",
     justifyContent: "space-evenly",
     alignContent: "center",
-    width: "100%",
+    width: "fit-content",
   },
 }));
 

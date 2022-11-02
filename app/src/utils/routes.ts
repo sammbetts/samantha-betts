@@ -1,5 +1,5 @@
 import { ComponentType } from 'react';
-import { HomePage } from '../pages';
+import { HomePage, BlogPage } from '../pages';
 
 export interface Page {
   path: string;
@@ -16,11 +16,11 @@ const getRoutes = () => {
       component: HomePage,
       title: 'Home',
     },
-    // form: {
-    //   path: '/dashboard',
-    //   component: DashboardPage,
-    //   title: 'Dashboard',
-    // },
+    form: {
+      path: '/blog',
+      component: BlogPage,
+      title: 'Blog',
+    },
   };
 
   return routes;
